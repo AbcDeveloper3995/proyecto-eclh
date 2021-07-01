@@ -1,0 +1,264 @@
+{% extends 'eclh/nosotros.html' %}
+{% load staticfiles %}
+
+ {% block extra_css %}
+     <link  href="{% static 'css/owl.carousel.min.css' %}" rel="stylesheet" type="text/css">
+    <link  href="{% static 'css/owl.theme.default.min.css' %}" rel="stylesheet" type="text/css">
+      <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}" type="text/css">
+     <link rel="stylesheet" href="{% static 'css/imagehover.min.css' %}" type="text/css">
+        <link  href="{% static 'css/animate.min.css' %}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/estilosEclh.css' %}" type="text/css">
+    {% endblock %}
+
+{% block nombre %}ECLH | Productos{% endblock %}
+{% block img %}style="background-image: url({% static 'images/fondo-azul.jpg' %});  background-size: cover;
+    height: 71vh;}"{% endblock %}
+ {% block navegacion %}
+        <nav class="collapse" id="navegacion">
+            <ul>
+                <li><a  href="{% url 'index' %}">Inicio</a></li>
+                <li><a class="active" href="{% url 'nosotros' %}">Nosotros</a></li>
+                <li><a href="{% url 'productos' %}">Productos</a></li>
+                <li><a href="{% url 'contacto' %}">Contacto</a></li>
+            </ul>
+        </nav>
+ {% endblock %}
+{% block titulo %}Nuestros Productos{% endblock %}
+{% block subtitulo %}Productos lacteos a su servicios{% endblock %}
+{% block contacto %}{% endblock %}
+{% block botonBajar %}{% endblock %}
+
+{% block seccion2 %}
+    <section class="seccion2-productos">
+    <h2 class="text-xs-center p-y-1 font-weight-bold wow flipInX">La mejor <span>calidad</span></h2>
+    <div class="container">
+        <div class="row">
+            <div class=" col-xs-12 m-t-1 col-lg-4">
+      <figure class="imghvr-zoom-out-flip-horiz wow fadeInLeft" data-wow-delay=".3s">
+    <img src="{% static 'images/queso-matilda.jpg' %}">
+    <figcaption>
+        <h3 class="text-xs-center">Queso Monumental</h3>
+         <p class="text-justify p-y-1">Es un alimento sólido elaborado a partir de la leche cuajada de vaca,
+                cabra, oveja, búfala, camella u otros mamíferos rumiantes. Es la conserva ideal pues muy
+                difícilmente se estropea con el transcurso del tiempo ya que al secarse mejoran sus cualidades
+                en relación al peso</p>
+        <a href="#" data-toggle="modal" data-target="#quesos">Detalles</a>
+    </figcaption>
+</figure>
+
+            </div>
+            <div class="col-xs-12 m-t-1 col-lg-4">
+         <figure class="imghvr-zoom-out-flip-horiz wow fadeInLeft" data-wow-delay=".2s">
+    <img src="{% static 'images/queso-matilda.jpg' %}">
+    <figcaption>
+        <h3 class="text-xs-center p-t-1">Queso Azul</h3>
+         <p class="text-justify p-y-1">Es un alimento sólido elaborado a partir de la leche cuajada de vaca,
+                cabra, oveja, búfala, camella u otros mamíferos rumiantes. Es la conserva ideal pues muy
+                difícilmente se estropea con el transcurso del tiempo ya que al secarse mejoran sus cualidades
+                en relación al peso</p>
+        <a href="#" data-toggle="modal" data-target="#quesos">Detalles</a>
+    </figcaption>
+         </figure>
+                </div>
+            <div class="col-xs-12 m-t-1 col-lg-4">
+            <figure class="imghvr-zoom-out-flip-horiz wow fadeInLeft" >
+    <img src="{% static 'images/queso-matilda.jpg' %}">
+    <figcaption>
+        <h3 class="text-xs-center p-t-1">Queso Blanco</h3>
+         <p class="text-justify p-y-1">Es un alimento sólido elaborado a partir de la leche cuajada de vaca,
+                cabra, oveja, búfala, camella u otros mamíferos rumiantes. Es la conserva ideal pues muy
+                difícilmente se estropea con el transcurso del tiempo ya que al secarse mejoran sus cualidades
+                en relación al peso</p>
+        <a href="#" data-toggle="modal" data-target="#quesos">Detalles</a>
+    </figcaption>
+</figure>
+                </div>
+            <div class="col-xs-12 m-t-1 col-lg-4">
+             <figure class="imghvr-zoom-out-flip-horiz wow fadeInLeft" data-wow-delay=".4s">
+    <img src="{% static 'images/yogurt-matilda.jpg' %}">
+    <figcaption>
+        <h3 class="text-xs-center p-t-1">Yogurt desnatado</h3>
+         <p class="text-justify p-y-1 p-x-1">
+                       El yogurt de soya es muy saludable pues combina las propiedades nutricionales de la soya con
+                        las ventajas para la salud del yogur desde el punto de vista de la asimilación, valor
+                        nutritivo y conservación de la salud. El yogur de soya se hace fermentando la leche de
+                        soya con bacterias amigables</p>
+                    <a href="#" data-toggle="modal" data-target="#yogurt">Detalles</a>
+    </figcaption>
+</figure>
+                 </div>
+            <div class="col-xs-12 m-t-1 col-lg-4">
+           <figure class="imghvr-zoom-out-flip-horiz wow fadeInLeft" data-wow-delay=".3s">
+    <img src="{% static 'images/yogurt-matilda.jpg' %}">
+    <figcaption>
+        <h3 class="text-xs-center p-t-1">Yogurt de Soya</h3>
+         <p class="text-justify p-y-1 p-x-1">
+                       El yogurt de soya es muy saludable pues combina las propiedades nutricionales de la soya con
+                        las ventajas para la salud del yogur desde el punto de vista de la asimilación, valor
+                        nutritivo y conservación de la salud. El yogur de soya se hace fermentando la leche de
+                        soya con bacterias amigables</p>
+                    <a href="#" data-toggle="modal" data-target="#yogurt">Detalles</a>
+    </figcaption>
+</figure>
+                  </div>
+            <div class="col-xs-12 m-t-1 col-lg-4">
+           <figure class="imghvr-zoom-out-flip-horiz wow fadeInLeft">
+    <img src="{% static 'images/yogurt-matilda.jpg' %}">
+    <figcaption>
+        <h3 class="text-xs-center p-t-1">Yogurt Natural</h3>
+         <p class="text-justify p-y-1 p-x-1">
+                       El yogurt de soya es muy saludable pues combina las propiedades nutricionales de la soya con
+                        las ventajas para la salud del yogur desde el punto de vista de la asimilación, valor
+                        nutritivo y conservación de la salud. El yogur de soya se hace fermentando la leche de
+                        soya con bacterias amigables</p>
+                    <a href="#" data-toggle="modal" data-target="#yogurt">Detalles</a>
+    </figcaption>
+</figure>
+            </div>
+                <div class="col-xs-12 m-t-1 col-lg-4">
+            <figure class="imghvr-zoom-out-flip-horiz wow fadeInLeft" data-wow-delay=".7s">
+     <img src="{% static 'images/helado-1.jpg' %}">
+    <figcaption>
+        <h3 class="text-xs-center p-t-1">Helados Coppelia</h3>
+         <p class=" text-justify p-y-1 p-x-1">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
+          moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+          Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin</p>
+                    <a href="#" data-toggle="modal" data-target="#helados">Detalles</a>
+    </figcaption>
+</figure>
+                </div>
+                    <div class="col-xs-12 m-t-1 col-lg-4">
+        <figure class="imghvr-zoom-out-flip-horiz wow fadeInLeft" data-wow-delay=".6s">
+   <img src="{% static 'images/helado-1.jpg' %}">
+    <figcaption>
+        <h3 class="text-xs-center p-t-1">Helados Varadero</h3>
+         <p class=" text-justify p-y-1 p-x-1">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
+          moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+          Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin</p>
+                    <a href="#" data-toggle="modal" data-target="#helados">Detalles</a>
+    </figcaption>
+</figure>
+                    </div>
+            </div>
+    </div>
+
+    <!-- Modal quesos-->
+<div class="modal fade" id="quesos" tabindex="-1" role="dialog"  aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title font-weight-bold">Elaboramos la mejor calidad en quesos</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+              <div class="row">
+                  <div class="col-md-8">
+        <p class="text-justify p-y-1">
+            La gran gama de quesos existentes hace imposible una clasificación única de los mismos.
+            Son muchas las características que los definen, como el grado de añejamiento, o curado, la
+            procedencia de la leche usada, su textura o su contenido en grasa.
+        </p>
+         <h3 class="text-xs-center">Quesos Azules</h3>
+        <p class="text-justify">
+            Estos quesos se distinguen por la presencia de mohos, los cuales les dan sus colores verdes o
+            azulados. Quizá sea la variedad que más rechazo pueda causar a simple vista, debido al color y
+            al fuerte olor, que puede recordar al de la descomposición. Sin embargo, su intenso sabor es uno
+            de los más apreciados por los gourmets del queso.
+        </p>
+                  </div>
+                  <div class=" bloque-img col-md-4">
+                      <aside class="col-xs-12 col-md-4  p-y-1">
+            <img class="img-modal" src="{% static 'images/queso-giraldilla.jpg'%}">
+        </aside>
+                  </div>
+              </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal yogurt-->
+<div class="modal fade" id="yogurt" tabindex="-1" role="dialog"  aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title font-weight-bold">Elaboramos la mejor calidad en Yogurt</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+              <div class="row">
+                  <div class="col-md-8">
+                      <h3 class="text-xs-center">Yogurt de Soya</h3>
+        <p class="text-justify p-y-1">
+            El yogur de soya puede ayudar a regular determinadas enzimas capaces de afectar los niveles de azúcar
+            en sangre en personas con diabetes mellitus tipo 2. El alto contenido en zinc de la soya facilita a
+            nuestro organismo la asimilación y el almacenamiento de la insulina. Al ser un alimento rico en potasio
+            ayuda a una buena circulación, regulando la presión arterial, por lo que es un alimento beneficioso para
+            personas que sufren de hipertensión
+        </p>
+        <p class="text-justify">
+            Como este tipo de yogur contiene lactobacterias saludables puede ayudar a mantener el colon y el
+            sistema digestivo saludable, reduciendo el riesgo de cáncer de colon; además, bloquea la absorción
+            de ciertas sustancias nocivas antes de que puedan llegar a ser causantes de cáncer en otras partes
+            del cuerpo. Los alimentos a base de soya, entre ellos el yogur, se asocia con un menor riesgo de
+            fracturas óseas en la tercera edad y también ayuda a controlar la obesidad y los síntomas de la
+            menopausia debido a sus fitoestrógenos
+        </p>
+                  </div>
+                  <div class=" bloque-img col-md-4">
+                      <aside class="aside col-xs-12 col-md-4  p-y-1">
+            <img class="img-modal" src="{% static 'images/yogurt-1.jpg'%}">
+        </aside>
+                  </div>
+              </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+    <!-- Modal helados-->
+<div class="modal fade" id="helados" tabindex="-1" role="dialog"  aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title font-weight-bold">Elaboramos la mejors calidad en helados</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+              <div class="row">
+                  <div class="col-md-8">
+        <p class="text-justify p-y-1">
+             NETWORK apuesta por la simplicidad, la actualidad y la originalidad. Creemos que la innovación creativa es la única vía para promover y fomentar contenidos de
+             calidad que fortalezcan la confianza de los usuarios en las posibilidades y nuevos usos de los productos digitales.
+        </p>
+        <p class="text-justify">
+            Nuestro objetivo es conseguir que clientes y usuarios se sientan conectados
+            en el nuevo mundo de la información con servicios y contenidos que no dificulten su relación, sino que
+            la simplifiquen y la conviertan en un hecho cotidiano, agradable y satisfactorio.
+        </p>
+                  </div>
+                  <div class=" bloque-img col-md-4">
+                      <aside class="col-xs-12 col-md-4  p-y-1">
+            <img class="img-modal" src="{% static 'images/coppelia.jpg'%}">
+        </aside>
+                  </div>
+              </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+    </section>
+{% endblock %}
+{% block seccion3 %}
+{% endblock %}

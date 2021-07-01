@@ -1,0 +1,113 @@
+{% extends 'eclh/index.html' %}
+{% load staticfiles %}
+
+{% block nombre %}ECLH | Nosotros{% endblock %}
+{% block img %}style="background-image: url({% static 'images/fondo-azul.jpg' %});  background-size: cover;
+    height: 70vh;}"{% endblock %}
+ {% block navegacion %}
+        <nav class="collapse" id="navegacion">
+            <ul>
+                <li><a  href="{% url 'index' %}">Inicio</a></li>
+                <li><a class="active" href="{% url 'nosotros' %}">Nosotros</a></li>
+                <li><a href="{% url 'productos' %}">Productos</a></li>
+                <li><a href="{% url 'contacto' %}">Contacto</a></li>
+            </ul>
+        </nav>
+ {% endblock %}
+{% block titulo %}Nosotros{% endblock %}
+{% block subtitulo %}¿Quiénes somos?¿Qué hacemos?{% endblock %}
+{% block contacto %}{% endblock %}
+{% block botonBajar %}{% endblock %}
+
+{% block seccion2 %}
+    <section class="seccion2-nosotros">
+    <h2 class="titulo text-xs-center font-weight-bold p-y-1 wow flipInX" >Trabajamos para tu <span>satisfación</span></h2>
+    <div class="container">
+    <p class="text-justify wow fadeInDown" data-wow-delay=".2s">Nuestro colectivo, de trabajadores experimentados y profesionales se encuentra en un proceso constante de
+        superación, integrando los conocimientos y valores individuales a los del grupo, para con su desempeño dar
+        solución a todas las problemáticas que se presentan en nuestro proceso de producción y servicios, para así
+        garantizar la calidad de nuestros servicios</p>
+        <div class="row">
+     <div class="accordion col-md-8" id="accordionExample">
+  <div class="card wow fadeInLeft">
+    <div class="card-header" id="headingOne">
+      <h2 class="mb-0">
+        <button  type="button" data-toggle="collapse" data-target="#collapseOne">
+          Mision
+        </button>
+      </h2>
+    </div>
+    <div id="collapseOne" class="collapse show collapse in" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div class="card-body p-a-1 text-justify">
+        Satisfacer las expectativas y demandas de productos lácteos y derivados de la soya, así como
+          garantizar los envases y embalajes con un capital humano competente
+      </div>
+    </div>
+  </div>
+  <div class="card wow fadeInLeft" data-wow-delay=".3s">
+    <div class="card-header" id="headingTwo">
+      <h2 class="mb-0">
+        <button class="collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo">
+          Vision
+        </button>
+      </h2>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+      <div class="card-body p-a-1 text-justify">
+        Somos una institución que  garantiza la producción y comercialización de productos lácteos y derivados de la
+          Soya, sobre la base del ahorro de recursos, el desarrollo de la informatización y la ejecución de los
+          proyectos inversionistas; que permita mantener la calidad de todas las producciones así como la  creación
+          de nuevas productos, que respondan a la sustitución de importaciones, e implementación de exportaciones,
+          en aras de cubrir las necesidades alimentarias de la sociedad y otros mercados con la cooperación de
+          organismos nacionales e internacionales.
+      </div>
+    </div>
+  </div>
+  <div class="card wow fadeInLeft" data-wow-delay=".6s">
+    <div class="card-header" id="headingThree">
+      <h2 class="mb-0">
+        <button class=" collapsed" type="button" data-toggle="collapse" data-target="#collapseThree">
+          Valores
+        </button>
+      </h2>
+    </div>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+      <div class="card-body p-a-1 text-justify">
+        Nuestro colectivo, en su diario quehacer se reconoce como capaz de solucionar los problemas dentro del
+          respeto y la comunicación clara, encontrándonos sistemáticamente en un proceso de actualización que nos
+          permite estar a la vanguardia en la actividad de la industria láctea. Constantemente nos retroalimentamos
+          de los criterios de nuestros clientes acerca de nuestro trabajo para poder brindarles un servicio de
+          excelencia. Es línea inviolable en nuestro desempeño el respeto mutuo y la actuación disciplinada,
+          apegada a los principios de la ética revolucionaria.
+      </div>
+    </div>
+  </div>
+</div>
+    <aside class="col-md-4 text-xs-center p-y-1">
+            <img src="{% static 'images/vbd.jfif'%}">
+        </aside>
+        </div>
+    </div>
+    </section>
+{% endblock %}
+
+{% block seccion3 %}
+    <section class="seccion3-nosotros" style="background-image: url({% static 'images/camion-c.jpg' %}); background-size: cover;background-attachment: fixed !important;">
+    <div style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none"
+                                                        style="height: 100%; width: 100%;">
+        <path d="M0.00,49.98 C150.00,150.00 349.20,-50.00 509.87,65.42 L503.10,-5.63 L-8.75,-42.15 Z"
+              style="stroke: none; fill: white;"></path></svg></div>
+        <h2 class="titulo text-xs-center font-weight-bold p-y-1 wow bounceIn">Somos tu empresa</h2>
+    <div class="container">
+    <div class="row">
+    <p class="parrafo col-md-12 text-xs-center wow bounceIn" data-wow-delay=".2s"> Nos caracteriza la disciplina, responsabilidad, sentido de pertenencia, la competencia, calidad y el
+        trabajo en equipo
+    </p>
+     <video class="video1 col-md-8 m-y-1 offset-md-2 "  src="{% static 'media/LACTEO INSTITUCIONAL.mp4' %}" controls></video>
+     </div>
+    </div>
+    </section>
+{% endblock %}
+
+{% block seccion4 %}{% endblock %}
+{% block seccion5 %}{% endblock %}

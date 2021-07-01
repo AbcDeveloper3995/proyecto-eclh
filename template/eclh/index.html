@@ -1,0 +1,227 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{% block nombre %}ECLH | Productos Lacteos{% endblock %}</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie-edge">
+    <link rel="icon" href="{% static 'faviconCLH.ico' %}">
+    {% block extra_css %}
+     <link  href="{% static 'css/owl.carousel.min.css' %}" rel="stylesheet" type="text/css">
+    <link  href="{% static 'css/owl.theme.default.min.css' %}" rel="stylesheet" type="text/css">
+      <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}" type="text/css">
+        <link  href="{% static 'css/animate.min.css' %}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/estilosEclh.css' %}" type="text/css">
+    {% endblock %}
+</head>
+<body>
+
+{% block seccion1 %}
+<section class="seccio1" {% block img %}style="background-image: url({% static 'images/fondo-azul.jpg' %});  background-size: cover;
+  height: 100vh;}"{% endblock %}>
+    <header class="encabezado navbar-fixed-top" role="banner">
+        <div class="container">
+        <a  href="#"><img class="logo" src="{% static 'images/logo-eclh.png' %}" alt="logo"></a>
+        <button class="boton-menu hidden-md-up" type="button" data-toggle="collapse" aria-expanded="false" data-target="#navegacion">
+            <i class="fa fa-reorder" aria-hidden="true"></i></button>
+        <button class="boton-buscar" type="button" data-toggle="collapse" aria-expanded="false" data-target="#caja-busqueda">
+            <i class="fa fa-search" aria-hidden="true"></i></button>
+        <form action="#" id="caja-busqueda" class="collapse">
+            <div class="contenedor-bloque-buscar">
+                <input type="text" placeholder="Buscar...">
+                <input type="submit" value="Buscar">
+            </div>
+        </form>
+             {% block navegacion %}
+        <nav class="collapse" id="navegacion">
+            <ul>
+                <li><a class="active" href="#">Inicio</a></li>
+                <li><a href="{% url 'nosotros' %}">Nosotros</a></li>
+                <li><a href="{% url 'productos' %}">Productos</a></li>
+                <li><a href="{% url 'contacto' %}">Contacto</a></li>
+            </ul>
+        </nav>
+                 {% endblock %}
+             </div>
+    </header>
+
+    <div class="seccion1-texto">
+     <div class="container text-xs-center">
+        <h1 class="titulo  wow bounceIn">{% block titulo %}El gusto del buen sabor{% endblock %}</h1>
+        <p class="subtitulo wow bounceIn" data-wow-delay=".2s">{% block subtitulo %}Producimos y comercializamos productos lacteos y sus derivados{% endblock %}</p>
+      {% block contacto %} <a  class="contacto btn btn-primary btn-lg" href="#">Contáctenos{% endblock %}</a>
+    </div>
+        </div>
+     {% block botonBajar %}
+         <div class="boton-bajar text-xs-center">
+            <a data-scroll href="#seccion2" ><i class="fa fa-angle-down" aria-hidden="true"></i></a>
+         </div>
+     {% endblock %}
+    <div class="hidden-sm-down" style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+        <path d="M-8.75,95.02 C150.00,150.00 301.07,-10.57 507.62,151.27 L501.97,150.28 L0.00,150.00 Z" style="stroke: none; fill: #ffffff;"></path>
+    </svg></div>
+</section>
+{% endblock %}
+
+{% block seccion2 %}
+<section class="seccion2" id="seccion2">
+    <div class="container text-xs-center">
+    <h1 class="titulo font-weight-bold m-y-2 p-y-1 wow flipInX">Superación, creatividad<span> e innovación</span></h1>
+    <div class="row">
+    <p class="parrafo col-sm-8 m-t-3 text-justify wow bounceInLeft" data-wow-delay=".2s">Tenemos clara la necesidad de hacer corresponder nuestros esfuerzos con los
+        resultados productivos y de servicios, en nuestro desempeño de forma estable se buscan alternativas
+        que nos permitan incrementar el uso y ahorro de nuestros recursos </p>
+    <img class="col-sm-4 m-t-1" src="{% static 'images/o.jfif' %}" alt="imagen-seccion2">
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block seccion3 %}
+<main class="seccion3">
+    <h2 class="titulo font-weight-bold text-xs-center wow bounceIn">Nuestros productos</h2>
+    <div class="container m-y-1">
+        <div class="row">
+    <article class="art-1 col-sm-6 col-lg-3 m-y-1">
+        <div class="img wow fadeInDown" data-wow-delay=".2s">
+        <img src="{% static 'images/quesos.jpg' %}">
+            </div>
+        <div class="img-cont">
+            <h2 class="text-xs-center">Quesos</h2>
+            <p class="text-justify"> Es un alimento sólido elaborado a partir de la leche cuajada de vaca,
+                cabra, oveja, búfala, camella u otros mamíferos rumiantes. Es la conserva ideal pues muy
+                difícilmente se estropea con el transcurso del tiempo ya que al secarse mejoran sus cualidades
+                en relación al peso.Las bacterias se encargan de acidificar la leche, jugando también un papel
+                importante en la definición de la textura y el sabor de la mayoría de los quesos.</p>
+        </div>
+    </article>
+    <article class="art-2 col-sm-6 col-lg-3 m-y-1">
+        <h4 class="text-xs-center"></h4>
+        <div class="img wow fadeInDown" data-wow-delay=".4s">
+        <img src="{% static 'images/APP_Lacteo_04-4.jpg' %}">
+            </div>
+        <div class="img-cont">
+            <h2 class="text-xs-center">Helados</h2>
+            <p class="text-justify"> Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
+          moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+          Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
+          shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente
+          ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm</p>
+        </div>
+    </article>
+    <article class="art-3 col-sm-6 col-lg-3 m-y-1">
+        <div class="img wow fadeInDown" data-wow-delay=".6s">
+        <img src="{% static 'images/yogurt-4.jpg' %}">
+             </div>
+        <div class="img-cont">
+            <h2 class="text-xs-center">Yogurt</h2>
+            <p class="text-justify">
+          El yogurt de soya es muy saludable pues combina las propiedades nutricionales de la soya con las
+                ventajas para la salud del yogur desde el punto de vista de la asimilación, valor nutritivo
+                y conservación de la salud. El yogur de soya se hace fermentando la leche de soya con bacterias
+                amigables, principalmente Lactobacillus bulgaricus y Streptococcus thermophilus</p>
+        </div>
+    </article>
+    <article class="art-4 col-sm-6 col-lg-3 m-y-1">
+         <div class="img wow fadeInDown" data-wow-delay=".8s">
+        <img src="{% static 'images/leches.jfif' %}">
+               </div>
+        <div class="img-cont">
+            <h2 class="text-xs-center">Leche</h2>
+            <p class="text-justify"> La leche es la base de numerosos productos lácteos, como la mantequilla,
+                el queso, el yogurt, entre otros. Es muy frecuente el empleo de los derivados de la leche en
+                las industrias agroalimentarias, químicas y farmacéuticas en productos como la Leche Condensada,
+                leche en polvo, Caseína o lactosa.Además, la leche entera de vaca es una importante fuente de
+                vitaminas (vitaminas A, B, D3, E), por lo que es recomendable para niños.</p>
+        </div>
+    </article>
+         </div>
+        </div>
+</main>
+{% endblock %}
+
+{% block seccion4 %}
+<section class="seccion4 ">
+    <h2 class="titulo font-weight-bold text-xs-center p-t-2 wow bounceIn">Como empresa productora</h2>
+      <div class="container">
+    <div class="bloque-1">
+         <div class="row">
+         <p class="parrafo col-sm-5 text-justify m-t-1 wow fadeInLeft" data-wow-delay=".2s">Nuestro colectivo, de trabajadores experimentados y profesionales cuenta con
+            la capacidad para dar solución a todas las problemáticas que se presentan en nuestro proceso
+            de producción y servicios, para así garantizar la calidad de nuestros servicios</p>
+
+         <video class="video1 col-sm-7 m-t-2 wow flipInX" data-wow-delay=".4s" src="{% static 'media/CAPSULA LACTEO 500.mp4' %}" controls></video>
+    </div>
+        </div>
+    <div class="bloque-2">
+        <div class="row">
+         <video class="video2 col-sm-5 m-y-2 wow flipInX" data-wow-delay=".4s " src="{% static 'media/CAPSULA LACTEO QUESOS.mp4' %}" controls></video>
+             <p class="parrafo col-sm-7 m-y-1 text-justify wow fadeInRight" data-wow-delay=".2s">Constantemente nos retroalimentamos de los criterios de nuestros clientes acerca
+             de nuestro trabajo para poder brindarles un servicio de excelencia. Es línea inviolable en nuestro
+             desempeño el respeto mutuo y la actuación disciplinada, apegada a los principios de la ética revolucionaria.</p>
+    </div>
+         </div>
+        </div>
+    <div style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none"
+                                                        style="height: 100%; width: 100%;">
+        <path d="M-7.06,82.20 C150.00,150.00 281.32,-7.60 517.20,121.67 L500.00,150.00 L0.00,150.00 Z"
+              style="stroke: none; fill: white;"></path></svg></div>
+</section>
+{% endblock %}
+
+{% block seccion5 %}
+<section class="seccion5">
+    <h2 class="titulo font-weight-bold text-xs-center m-y-1">Galeria</h2>
+    <div class="owl-carousel owl-theme">
+    <article class="item">
+        <img src="{% static 'images/siboney.jpg' %}">
+    </article >
+    <article class="item">
+        <img src="{% static 'images/yogurt-1.jpg' %}">
+    </article>
+    <article class="item">
+        <img src="{% static 'images/queso-matilda.jpg' %}">
+    </article>
+    <article class="item">
+        <img src="{% static 'images/fernando chenan.jpg' %}">
+    </article>
+    <article class="item">
+        <img src="{% static 'images/helado-1.jpg' %}">
+    </article>
+    <article class="item">
+        <img src="{% static 'images/yogurt-matilda.jpg' %}">
+    </article>
+    <article class="item">
+        <img src="{% static 'images/moralitos.jpg' %}">
+    </article>
+    <article class="item">
+        <img src="{% static 'images/queso-giraldilla.jpg' %}">
+    </article>
+    </div>
+</section>
+{% endblock %}
+
+{% block footer %}
+<footer class="piedepagina" role="contentinfo">
+    <p class="text-xs-center">2020 © Complejo Lacteo Habana Todos los derechos reservados</p>
+    <ul>
+        <li><a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+        <li><a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+        <li><a href="#"><i class="fa fa-youtube-square" aria-hidden="true"></i></a></li>
+    </ul>
+</footer>
+    <a data-scroll class="arriba" href="#"><i class="fa fa-arrow-circle-up" aria-hidden="true"></i></a>
+{% endblock %}
+
+{% block extra_js %}
+<script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/owl.carousel.min.js' %}"></script>
+<script  type="text/javascript" src="{% static 'js/wow.min.js' %}"></script>
+    <script  type="text/javascript" src="{% static 'js/smooth-scroll.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/funciones.js' %}"></script>
+{% endblock %}
+</body>
+</html>

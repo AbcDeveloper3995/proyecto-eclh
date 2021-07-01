@@ -1,0 +1,71 @@
+{% extends 'eclh/nosotros.html' %}
+{% load staticfiles %}
+
+{% block nombre %}ECLH | Nosotros{% endblock %}
+{% block img %}style="background-image: url({% static 'images/fondo-azul.jpg' %});  background-size: cover;
+    height: 70vh;}"{% endblock %}
+ {% block navegacion %}
+        <nav class="collapse" id="navegacion">
+            <ul>
+                <li><a  href="{% url 'index' %}">Inicio</a></li>
+                <li><a class="active" href="{% url 'nosotros' %}">Nosotros</a></li>
+                <li><a href="{% url 'productos' %}">Productos</a></li>
+                <li><a href="{% url 'contacto' %}">Contacto</a></li>
+            </ul>
+        </nav>
+ {% endblock %}
+{% block titulo %}Contáctenos{% endblock %}
+{% block subtitulo %}Estamos listos para escucharte{% endblock %}
+{% block contacto %}{% endblock %}
+{% block botonBajar %}{% endblock %}
+
+{% block seccion2 %}
+    <section class="seccion2-contacto">
+    <div class="container">
+        <div class="row">
+    <form class="formulario col-md-8">
+        <h2 class="titulo text-xs-left p-y-1 font-weight-bold wow rotateInDownLeft" data-wow-delay=".4s">Informacion a completar</h2>
+         <div class="row">
+        <div class="form-group col-md-6">
+            <label class="col-form-label" for="nombre">Nombre</label>
+            <input class="form-control" id="nombre" type="text" placeholder="Ingrese su nombre">
+        </div>
+        <div class="form-group col-md-6 ">
+            <label class="col-form-label" for="apellido">Apellido</label>
+            <input class="form-control" id="apellido" type="text" placeholder="Ingrese su apellido">
+        </div>
+        <div class="form-group col-xs-12" >
+            <label class="col-form-label" for="email">Email</label>
+            <input class="form-control" id="email" type="email" placeholder="Ingrese su email" >
+        </div>
+        <div class="form-group col-xs-12">
+            <label class="col-form-label" for="sms">Mensaje</label>
+            <textarea class="form-control" id="sms" type="text" placeholder="Ingrese un mensaje" ></textarea>
+        </div>
+             </div>
+        <div class=" formulario-btn offset-md-8 p-y-2">
+        <button class="btn" type="submit">Enviar</button>
+        <button class="btn" type="reset">Limpiar</button>
+        </div>
+    </form>
+            <div class="dato col-md-4">
+        <h2 class=" titulo2 text-xs-center font-weight-bold p-y-1 wow rotateInDownRight" data-wow-delay=".4s">Datos del contacto</h2>
+                <div class="card">
+                    <i class="card-icon fa fa-map-marker"></i>
+                    <p class="font-weight-bold">Carretera Monumental, Km 23 1/2, Cotorro, Ciudad de la Habana</p>
+                </div>
+                <div class="card">
+                    <i class="card-icon fa fa-phone"></i>
+                    <p class="font-weight-bold">76827113</p>
+                </div>
+                <div class="card">
+                    <i class="card-icon fa fa-envelope"></i>
+                    <p class="font-weight-bold">comercial@eclh.cu</p>
+                </div>
+                </div>
+            </div>
+    </div>
+    </section>
+{% endblock %}
+{% block seccion3 %}
+{% endblock %}

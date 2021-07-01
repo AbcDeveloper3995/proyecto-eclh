@@ -1,0 +1,644 @@
+//-----------------
+//Patron de colores
+//-----------------
+$texto:#111111;
+$principal:#6E86E0;
+$segundario:#12AFAF;
+
+//-----------
+//Tamaño y color estandar de mi fuente
+//----------
+html{
+  font-size: 15px;
+}
+
+body{
+  color: $texto;
+}
+
+
+/*------Estilos para el encabezado(header)------*/
+.seccio1{
+  background-attachment: fixed !important;
+  display: flex;
+  flex-direction: column;
+  animation: movimiento 10s infinite linear alternate;
+
+}
+@keyframes movimiento {
+  from{
+    background-position: bottom left;
+  }
+  to{
+    background-position: top right;
+  }
+}
+.seccio1 .encabezado{
+  background: black;
+  transition: .8s all ease;
+}
+.seccio1 .menu{
+  opacity: .9;
+  padding: 1rem 0
+}
+
+.seccio1 .container{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.logo{
+  height: 80px;
+  width: auto;
+}
+.boton-menu,
+.boton-buscar{
+  background: transparent;
+  border: 0;
+  font-size: 2rem;
+  margin: 0;
+  padding: 0 .5rem;
+  color: white;
+}
+.boton-menu {
+  margin-left: auto;
+  margin-right: .8rem;
+}
+.boton-menu:focus,
+.boton-buscar:focus{
+  outline: 0;
+}
+#caja-busqueda{
+  flex: 1 1 100%;
+}
+
+.contenedor-bloque-buscar{
+  display: flex;
+  height: 3rem;
+  margin: 1rem 0;
+}
+
+.contenedor-bloque-buscar input[type="text"]{
+  flex: 1 1 auto;
+  border: 0;
+  border-radius: 5px 0 0 5px;
+  padding: 1rem ;
+}
+.contenedor-bloque-buscar input[type="submit"]{
+  border: 0;
+  border-radius: 0 5px 5px 0;
+  background: $principal;
+  color: white;
+}
+#navegacion{
+  flex: 1 1 100%;
+}
+#navegacion ul{
+  padding: 0;
+  margin: 1rem 0 0 0;
+  list-style: none;
+}
+#navegacion ul li a{
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  border-top: 1px $principal solid ;
+  text-transform: uppercase;
+  color: white;
+  padding: .8rem 0 ;
+  transition: all .5s ease;
+}
+#navegacion ul li a:hover{
+  color: $principal;
+}
+#navegacion ul li.active a{
+  color: $principal;
+}
+/*------Estilos para el resto de la seccion1------*/
+.seccion1-texto{
+  flex: 1 1 auto;
+}
+.seccion1-texto .container{
+  display: flex;
+  flex-direction: column;
+}
+.seccion1-texto .titulo{
+  font-family: "Lucida Calligraphy";
+  margin-top: 10rem;
+  color: #ffffff;
+  text-transform: uppercase;
+
+}
+.seccion1-texto .subtitulo{
+  color: #ffffff;
+  font-size: 1.3rem;
+}
+.seccion1-texto .contacto{
+  background-size: 200%;
+  background-image: linear-gradient(to left, #fda7df, #9980fd, #fda7df);
+  border-color: transparent;
+  margin-top: 2rem;
+  transition: all .5s ease;
+}
+.seccion1-texto .contacto:hover{
+  background-position: right;
+}
+
+.boton-bajar a{
+  display: inline-block;
+  color: #fff;
+  font-size: 4rem;
+  animation: flecha-animada 1s ease-in-out infinite;
+}
+.boton-bajar:focus,
+.boton-bajar:hover{
+  color: #fff;
+}
+@keyframes flecha-animada {
+  from{
+    transform: translateY(0);
+  }
+  50%{
+    transform: translateY(6px);
+  }
+  top{
+    transform: translateY(0);
+  }
+}
+
+/*------Estilos para nuestros productos------*/
+.seccion3 img{
+  height: 150px;
+  width: 100%;
+}
+.seccion2 .titulo span{
+  color: $principal;
+}
+.seccion2 .titulo{
+  font-family: "Lucida Calligraphy";
+  -webkit-box-shadow: -18px 14px 23px 0px rgba(0,0,0,0.82);
+-moz-box-shadow: -18px 14px 23px 0px rgba(0,0,0,0.82);
+box-shadow: -18px 14px 23px 0px rgba(0,0,0,0.82);
+}
+.seccion2 .parrafo{
+  font-size: 1.3rem;
+   -webkit-box-shadow: -11px 3px 23px 0px rgba(0,0,0,0.82);
+-moz-box-shadow: -11px 3px 23px 0px rgba(0,0,0,0.82);
+box-shadow: -11px 3px 23px 0px rgba(0,0,0,0.82);
+
+}
+/*------Estilos para la seccion3------*/
+.seccion3 {
+  background: #bbd2c5; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #bbd2c5, #536976, #292e49); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #bbd2c5, #536976, #292e49); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  padding: 1rem;
+  color: white;
+}
+.seccion3 .titulo{
+  font-family: "Lucida Calligraphy";
+}
+.seccion3 .row article {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  margin: 20px 0;
+  perspective: 1000px;
+  overflow: hidden;
+  transform-style:preserve-3d ;
+}
+.seccion3 .row article .img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 95%;
+  height: 100%;
+    transform-origin: top;
+   transform-style:preserve-3d ;
+  transition: .8s all ease;
+  transition-delay: .3s;
+}
+.seccion3 .row article .img img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  border: 2px $texto solid;
+  border-radius: 10px;
+  transform-origin: top;
+  transform-style:preserve-3d ;
+  object-fit: cover;
+}
+.seccion3 .row article:hover .img{
+  transform: rotateX(-90deg);
+  opacity: 0;
+  transition-delay: 0s;
+}
+.seccion3 .row article .img-cont{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 95%;
+  height: 100%;
+   border-radius: 10px;
+  background: $texto;
+  padding: 1rem;
+    transform-origin: bottom;
+   transform-style:preserve-3d ;
+  transform: rotateX(90deg);
+  opacity: 0;
+  transition: .8s all ease;
+}
+.seccion3 .row article .img-cont h2{
+  border-bottom: 1px $principal solid;
+}
+.seccion3 .row article:hover .img-cont{
+  transform: rotateX(0deg);
+  opacity: 1;
+  transition-delay: .3s;
+}
+
+
+/*------Estilos para la seccion4------*/
+.seccion4 {
+   background: url("../images/fondo-2.jpg") no-repeat center top;
+  background-attachment: fixed !important;
+  color: #fff;
+  background-size: cover;
+}
+.seccion4 .titulo{
+  font-family: "Lucida Calligraphy";
+}
+.seccion4 p{
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+.seccion4  video{
+  border: 2px $segundario solid;
+  border-radius: 10px;
+  padding: 0;
+  height: 65%;
+}
+/*------Estilos para la seccion5------*/
+.seccion5 .titulo{
+  font-family: "Lucida Calligraphy";
+}
+.seccion5 article img{
+  height: 370px;
+  border: 2px $texto solid;
+  border-radius: 10px;
+}
+.seccion5 .owl-carousel .owl-nav .owl-prev,
+.seccion5 .owl-carousel .owl-nav .owl-next{
+  font-size: 3.5rem;
+  color: $principal;
+  transition: all .7s ease;
+}
+.seccion5 .owl-carousel .owl-nav .owl-prev:hover,
+.seccion5 .owl-carousel .owl-nav .owl-next:hover{
+  color: $texto;
+  background: transparent;
+}
+.seccion5 .owl-carousel .owl-nav .owl-prev:focus,
+.seccion5 .owl-carousel .owl-nav .owl-next:focus{
+  outline: 0;
+}
+
+/*------Estilos para el footer------*/
+.piedepagina{
+  background: $texto;
+  color: white;
+}
+.piedepagina p{
+  font-size: .9rem;
+  padding-top: 1rem;
+}
+
+.piedepagina ul{
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 1rem;
+}
+
+.piedepagina ul li a i{
+  font-size: 2rem;
+  margin-left: 1rem;
+  color: #fff;
+  transition: all .3s ease;
+}
+
+.piedepagina ul li a i:hover {
+  color: $principal; }
+
+.arriba {
+  display: none;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  color: $principal;
+  text-decoration: none;
+  z-index: 99999;
+  font-size: 2.5rem;
+  line-height: 0;
+  transition: all .3s ease; }
+
+.arriba:hover,
+.arriba:focus {
+  outline: 0;
+  color: $segundario; }
+
+
+/*-------------------------------
+Medias querys
+ ------------------------------*/
+@media (min-width: 768px) {
+  #navegacion {
+    height: auto !important;
+    display: block;
+    flex: 0 1 auto;
+    margin-left: auto;
+  }
+
+  #navegacion ul {
+    display: flex;
+    margin: 0; }
+
+  #navegacion ul li a {
+    padding: .8rem;
+    margin: 0 .3rem;
+    text-transform: capitalize;
+    border-top: 0px;
+    transition: all .2s ease; }
+
+  #navegacion ul li.active a,
+  #navegacion ul li a:hover {
+    color: #12AFAF;
+    border-bottom: 3px solid;
+    background: transparent; }
+
+  .boton-buscar {
+    margin-left: 1rem;
+    margin-right: 0;
+    order: 1;
+  }
+
+  #caja-busqueda {
+    order: 2;
+    position: absolute;
+    top: 4.4rem;
+    width: 20rem;
+    right: 3rem;
+    transition: all .3s ease; }
+
+  .seccion2 .parrafo{
+  height: 150px;
+}
+  .bloque-img{
+    max-width: 0;
+  }
+ .img-modal{
+  margin-left: 0 !important;
+  width: 150px !important;
+   height: 200px;
+  border-radius: 10px;
+}
+}
+@media (max-width: 992px) {
+  .seccion2-productos .container .card{
+  border: 0;
+  margin-bottom: 4.5rem;
+  background: whitesmoke;
+
+}
+  .bloque-img{
+    max-width: 0;
+  }
+ .img-modal{
+  margin-left: 0 !important;
+  width: 200px !important;
+   height: 200px;
+  border-radius: 10px;
+}
+}
+
+/*------Estilos para la pagina nosotros------*/
+.seccion2-nosotros span{
+  color: $principal;
+}
+.seccion2-nosotros .titulo{
+  font-family: "Lucida Calligraphy";
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin: 1.3rem;
+   -webkit-box-shadow: -18px 14px 23px 0px rgba(0,0,0,0.82);
+-moz-box-shadow: -18px 14px 23px 0px rgba(0,0,0,0.82);
+box-shadow: -18px 14px 23px 0px rgba(0,0,0,0.82);
+}
+
+.seccion2-nosotros p{
+  margin: 3.5rem;
+  padding: 1rem;
+  font-size: 1.3rem;
+  -webkit-box-shadow: -11px 3px 23px 0px rgba(0,0,0,0.82);
+-moz-box-shadow: -11px 3px 23px 0px rgba(0,0,0,0.82);
+box-shadow: -11px 3px 23px 0px rgba(0,0,0,0.82);
+}
+
+.seccion2-nosotros .card{
+  margin-bottom: 2rem;
+   -webkit-box-shadow: -11px 3px 23px 0px rgba(0,0,0,0.82);
+-moz-box-shadow: -11px 3px 23px 0px rgba(0,0,0,0.82);
+box-shadow: -11px 3px 23px 0px rgba(0,0,0,0.82);
+}
+
+.seccion2-nosotros .card-header{
+  background: $segundario;
+  background-size: 200%;
+  background-image: linear-gradient(to left, #fda7df, #9980fd, #fda7df);
+  border-color: transparent;
+  transition: all .5s ease;
+}
+.seccion2-nosotros .card-header:hover{
+  background-position: right;
+}
+.seccion2-nosotros button{
+  color: white;
+  background: transparent;
+  border: 0;
+}
+.seccion2-nosotros button:focus{
+  outline:  0;
+}
+.seccion3-nosotros h2{
+  font-family: "Lucida Calligraphy";
+  color: whitesmoke;
+}
+.seccion3-nosotros p{
+  font-size: 1.3rem;
+  color: whitesmoke;
+}
+.seccion3-nosotros video{
+  border: 2px $segundario solid;
+  border-radius: 10px;
+  padding-right: 0;
+  padding-left: 0;
+}
+/*------Estilos para la pagina productos------*/
+.seccion2-productos h2{
+  font-family: "Lucida Calligraphy";
+  -webkit-box-shadow: -18px 14px 23px 0px rgba(0,0,0,0.82);
+-moz-box-shadow: -18px 14px 23px 0px rgba(0,0,0,0.82);
+box-shadow: -18px 14px 23px 0px rgba(0,0,0,0.82);
+  margin-bottom: 3rem;
+}
+.seccion2-productos h2 span{
+  color: $principal;
+}
+.seccion2-productos .container{
+   margin-bottom: 3rem;
+}
+.seccion2-productos .container .row figure{
+   width: 100%;
+  -webkit-box-shadow: -18px 14px 23px 0px rgba(0,0,0,0.82);
+-moz-box-shadow: -18px 14px 23px 0px rgba(0,0,0,0.82);
+box-shadow: -18px 14px 23px 0px rgba(0,0,0,0.82);
+  margin-bottom: .5rem;
+  height: 410px;
+  background: transparent;
+  padding: 0px;
+  border: 2px $texto solid;
+  border-radius: 10px;
+}
+
+.imghvr-zoom-out-flip-horiz img{
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+.seccion2-productos .container figcaption{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: $principal;
+}
+.seccion2-productos .container figcaption h3{
+  transform: translateY(-25px);
+  opacity: 0;
+  transition: .3s all linear;
+  transition-delay: .2s;
+}
+.seccion2-productos .container figcaption:hover h3{
+  transform: translateY(0px);
+  opacity: 1;
+}
+.seccion2-productos .container  figcaption a{
+   display: block;
+  flex: 0 0 100px;
+  align-self: center;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 900;
+  height: 10%;
+  padding: 5px;
+  margin: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  background: $principal;
+  color: white;
+  transform: translateY(326px);
+  background-position: 20px;
+  transition: 1s all ease;
+}
+.seccion2-productos .container figure a:hover{
+   background: white;
+  color: $principal;
+}
+.modal-title{
+     margin-bottom: -1.6rem;
+   }
+.img-modal{
+  margin-left: 1.5rem;
+  width: 80%;
+  border-radius: 10px;
+}
+
+/*------Estilos para la pagina contacto------*/
+.seccion2-contacto .titulo{
+  font-family: "Lucida Calligraphy";
+}
+.seccion2-contacto .titulo2{
+  font-family: "Lucida Calligraphy";
+}
+.seccion2-contacto .form-group input,
+.seccion2-contacto .form-group textarea{
+  border: 0;
+  border-bottom: 1px black solid;
+}
+.seccion2-contacto .form-group input:focus,
+.seccion2-contacto .form-group textarea:focus{
+  border-bottom: 1px $principal solid;
+}
+
+.form-control::placeholder{
+  transition: 1s all ease;
+}
+.form-control:focus::placeholder{
+  opacity: 0;
+  letter-spacing: 50px;
+}
+.form-group label{
+  padding-bottom: 0;
+}
+.formulario-btn .btn{
+  color: white;
+  margin-left: 1rem;
+  background: $segundario;
+  background-size: 200%;
+  background-image: linear-gradient(to left, #fda7df, #9980fd, #fda7df);
+  border-color: transparent;
+  -webkit-box-shadow: 4px 5px 35px -10px rgba(0,0,0,0.82);
+-moz-box-shadow: 4px 5px 35px -10px rgba(0,0,0,0.82);
+box-shadow: 4px 5px 35px -10px rgba(0,0,0,0.82);
+  transition: all .5s ease;
+}
+.formulario-btn .btn:hover{
+  background-position: right;
+}
+.formulario-btn .btn:focus{
+  outline: 0;
+}
+ .dato .card {
+   text-align: center;
+   padding: 1rem;
+   color: black;
+   border: 0;
+   font-family: "Britannic Bold";
+}
+ .dato .card p{
+  margin-top: 1rem;
+   opacity: 0;
+   transition: .5s all ease;
+}
+ .dato .card:hover p{
+   max-height: 1.5rem;
+   opacity: 1;
+ }
+ .dato .card i{
+  font-size: 2rem;
+   background: $principal;
+   width: 4rem;
+   color: white;
+   height: 4rem;
+   line-height: 4rem !important;
+   border-radius: 50%;
+   transition: .5s all ease;
+}
+ .dato .card:hover i{
+   background: none;
+   color: $principal;
+   transform: scale(1.6);
+ }
